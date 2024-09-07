@@ -1,0 +1,67 @@
+If the value of a variable does not vary from object to object then we go for static variables
+If the value of a variable changes from object to object then instance variable
+
+for example class school
+
+name and roll no are instance variable
+
+School Name is static variable
+
+
+Only one copy of the static variable is created at the class level and shared among diff objects
+reason --> multiple copies, memory wastage and performance and updation problem. 
+
+
+instance variable -- object  level variable, separate copy
+
+
+Static variable -- class level variable, single copy
+
+
+Various places to declare static variables
+
+# 1  WIthin the class directly but oustside of any method or constructor
+
+for example
+
+
+class Test:
+  a =10  # static variable
+
+
+
+t = Test()
+print(t.__dict__)  # {}
+print(Test.__dict__)
+
+
+# 2 Inside constructor by using class name 
+
+
+def __init__(self):
+    self.b = 10 # instance variable
+    Test.c = 20  # static variable
+
+# 3 instance instance method by using class name
+
+def m1(self):
+    Test.e =90  # static variable
+
+# 4 Inside class method by using cls or classname
+
+ @classmethod
+    def m2(cls):
+        cls.g = 55
+        Test.h = 14
+
+
+
+# 5 Inside static method by using class name
+    @staticmethod
+    def m3():
+        Test.kk =11
+
+
+
+# 6 outside of the class by using class name
+
