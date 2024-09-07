@@ -1,0 +1,94 @@
+# how to access the static variable
+
+static varibles can be accessed either by class name or by object reference ( self or cls )
+
+** recommened is class name
+
+
+# 1 Inside constructor --> by using self or class name
+
+class Test:
+    a = 10
+    def __init__(self):
+        print(self.a)
+        print("---")
+        print(Test.a)
+
+
+t = Test()
+
+
+  o/p
+
+10
+---
+10
+
+
+# 2 Inside instance method by using self or class name
+
+class Test:
+    a = 10
+    def __init__(self):
+        print(self.a)
+        print("---")
+        print(Test.a)
+    def m1(self):
+        print(self.a)
+        print("----")
+        print(Test.a)
+
+
+t = Test()
+t.m1()
+
+o/p 
+10
+---
+10
+10
+----
+10
+
+
+# 3 Inside class method --> by using cls or class name.
+
+class Test:
+    a = 10
+    def __init__(self):
+        print(self.a)
+        print("---")
+        print(Test.a)
+    def m1(self):
+        print(self.a)
+        print("----")
+        print(Test.a)
+
+    @classmethod
+    def m3(cls):
+        print(cls.a)
+        print("---")
+        print(Test.a)
+
+t = Test()
+t.m1()
+
+
+  o/p
+10
+---
+10
+10
+----
+10
+
+# 4 Inside static method --> by using class name.
+
+   @staticmethod
+    def m4():
+        print(Test.a)
+
+# 5 outside of the class either by object reference or class name
+
+
+
