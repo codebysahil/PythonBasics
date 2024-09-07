@@ -1,0 +1,22 @@
+instance variable can be deleted from the given object.
+
+  # within the class 
+
+   del self.variablname
+  del self.c
+
+
+  # outside of the class  by using object reference
+
+   del object reference .variablename
+    del t.a
+
+
+
+# deleting multiple instance variable
+
+del t.a , t.b
+
+
+
+  The instance variable which are deleted from one object won't be deleted from other objects because for every object seprate copy is there
