@@ -1,0 +1,65 @@
+if the value of variable is varied from object to object such type of variable are called instance variable or object level variable.
+for example --> school and roll no of student
+for every object separate copy of instance variables will be created
+Most of the time instance variables are declared inside constrcutor by using self variable.
+We can declare Instance variable at 3 places
+      1 . Inside constructor by using self
+      2 . Inside Instance method by using self
+      3 . Outside of the class by using object reference variable
+
+
+for example 
+
+
+
+   class Test:
+       def __init__(self):
+          self.a =10
+          self.b =20
+    t= Test()
+    print(t.__dict__)  # this will print the o/p in the key value format that is object and value of an object of that instance ( t in this case )
+
+
+
+
+
+
+
+class Test:
+ # case 1 declaring the instance variable inside the constructor
+    def __init__(self):
+
+        self.a =10
+        self.b =20
+
+    def print_name(self):
+        print("hello from print name function")
+
+  # case 2  declaring the instance variable inside the instance method
+
+    def m1(self):
+        self.c = 30
+
+
+
+t = Test()
+print(t.__dict__) # {'a': 10, 'b': 20}
+
+print("--------------------------------------------")
+
+t.m1()
+
+
+
+print(t.__dict__) # {'a': 10, 'b': 20, 'c': 30}
+
+# Outside of the class by using object reference variable
+
+t.d =40
+
+print(t.__dict__) # {'a': 10, 'b': 20, 'c': 30, 'd': 40}
+
+
+
+
+
