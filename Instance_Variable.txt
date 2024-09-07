@@ -60,6 +60,8 @@ t.d =40
 print(t.__dict__) # {'a': 10, 'b': 20, 'c': 30, 'd': 40}
 
 
+Important point to remember :
 
+In python no of instance variable can vary from object to object while this is not the case with other PL like Java
 
 
