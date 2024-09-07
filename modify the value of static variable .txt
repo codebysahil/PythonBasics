@@ -1,0 +1,10 @@
+# static variable can be modified only and only by using cls variable or class name . 
+self and object reference can't be used to modify the static variable
+static variable can be moified anywhere within the class or outside the class by using class name.
+But inside the class methods we can also use cls variable.
+
+Inside the constructor  -------- class name
+Inside the instance method  -------- class name
+Inside the class method   -------- class name and cls
+Inside the static method  -------- class name
+Outside of the class     -------- class name
