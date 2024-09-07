@@ -1,0 +1,29 @@
+Inside class 
+
+By using the self you can access instance variable.
+
+
+Outside of the class 
+
+By using the object reference.
+
+
+class Test:
+
+    def __init__(self):
+        self.a = 10
+        self.b = 20
+
+    def display(self):
+        print(self.a) # inside python class instance variable can be accessed by using self
+        print(self.b)
+
+
+t = Test()
+
+t.display()
+
+print("====Outside of the class by using object reference====")
+
+print(t.a)
+print(t.b)
